@@ -6,8 +6,8 @@
     <title>Mãn Lê Nhật Uyên - Giới thiệu</title>
 
     <!-- SEO -->
-    <meta name="description" content="Giới thiệu về Mãn Lê Nhật Uyên - ngày sinh, lớp 11A1, sở thích và thông tin cá nhân.">
-    <meta name="keywords" content="Mãn Lê Nhật Uyên, Man Le Nhat Uyen, Uyên 11A1, hồ sơ cá nhân, thông tin học sinh">
+    <meta name="description" content="Giới thiệu Mãn Lê Nhật Uyên - ngày sinh, lớp 11A1, sở thích, thông tin và liên kết mạng xã hội.">
+    <meta name="keywords" content="Mãn Lê Nhật Uyên, Man Le Nhat Uyen, Uyên 11A1, hồ sơ cá nhân, profile học sinh">
     <meta name="robots" content="index, follow">
 
     <style>
@@ -17,49 +17,100 @@
             color: #fff;
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .container {
             background-color: #111;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 18px;
             text-align: center;
-            width: 300px;
+            width: 330px;
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.08);
+            animation: fadeUp 0.8s ease-in-out;
+        }
+
+        @keyframes fadeUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
             border: 3px solid #444;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+            transition: 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
         }
 
         h2 {
             color: #33cc33;
             margin-bottom: 10px;
+            font-size: 22px;
         }
 
         p {
-            margin: 6px 0;
-            font-size: 16px;
+            margin: 7px 0;
+            font-size: 17px;
         }
 
         .highlight {
-            color: #ff66aa;
+            color: #ff77c7;
             font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+
+        .messenger-btn {
+            background-color: #0084ff;
+        }
+
+        .messenger-btn:hover {
+            background-color: #1d9cff;
+        }
+
+        audio {
+            margin-top: 10px;
+            width: 250px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="image.jpg" alt="Ảnh đại diện" class="profile-img">
+        <img src="image.jpg" class="profile-img">
 
         <h2>Mãn Lê Nhật Uyên</h2>
 
@@ -67,8 +118,24 @@
         <p><strong>Lớp:</strong> 11A1</p>
         <p><strong>Sở thích:</strong> Hát</p>
 
-        <!-- Dòng ông yêu cầu -->
-        <p><strong>Giới thiệu:</strong> <span class="highlight">đang mập mờ với ttqt nha 😼</span></p>
+        <p><strong>Giới thiệu:</strong> 
+            <span class="highlight">đang mập mờ với ttqt nha 😼</span>
+        </p>
+
+        <!-- Button Facebook -->
+        <a href="https://facebook.com" target="_blank" class="btn">
+            Facebook của Uyên
+        </a>
+
+        <!-- Messenger Chat -->
+        <a href="https://m.me/" target="_blank" class="btn messenger-btn">
+            Nhắn tin Messenger
+        </a>
+
+        <!-- Nhạc nền -->
+        <audio controls autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
     </div>
 
 </body>
